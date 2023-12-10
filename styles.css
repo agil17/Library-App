@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: lightblue;
+}
+
+.new-book-btn-container {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.new-book-btn {
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    background: red;
+    color: white;
+    font-weight: bolder;
+}
+
+.header-text {
+    font-size: 1.5rem;
+}
+
+.form-container {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    background: gray;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.new-book-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+label {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.new-line-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+input[type='submit'] {
+    font-size: larger;
+    font-weight: bolder;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: green;
+    color: white;
+}
+
+.library-container {
+    background: orange;
+    flex: 1;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background: lightgray;
+    gap: .5rem;
+    width: 300px;
+    min-height: 200px;
+    border-radius: 20px;
+}
+
+.book-title, .book-author, .book-pages {
+    text-align: center;
+    text-wrap: balance;
+    font-size: 1.3rem;
+}
+
+.book-read {
+    font-weight: bold;
+    background: white;
+    border-radius: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.buttons-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: .5rem;
+}
+
+.buttons-container button {
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+
+.remove-btn {
+    background: red;
+    font-size: larger;
+    font-weight: bolder;
+    color: white;
+}
+
+.toggle-read-btn {
+    background: #5d5de6;
+    color: white;
+}
