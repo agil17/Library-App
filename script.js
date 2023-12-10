@@ -22,6 +22,7 @@ newBookBtn.addEventListener('click', function() {
     formContainer.style.display === 'block' ? formContainer.style.display = 'none' : formContainer.style.display = 'block';
 })
 
+
 //add book
 function addBookToLibrary() {
     let title = document.querySelector('#title').value;
@@ -37,7 +38,7 @@ function addBookToLibrary() {
 
 }
 
-//add event listener to form 
+// add event listener to form 
 let newBookForm = document.querySelector('.new-book-form').addEventListener('submit', function(event) {
     event.preventDefault();
     addBookToLibrary();
@@ -98,11 +99,15 @@ function showBooks() {
         bookCard.appendChild(buttonsContainer);
 
         libraryEl.appendChild(bookCard);
-        
+    }
         let booksAmount = document.querySelector('.books-amount');
         booksAmount.textContent = "";
         booksAmount.textContent = `${myLibrary.length}`;
-    }
+        
+        if(myLibrary.length === 0) {
+            booksAmount.textContent = "";
+            booksAmount.textContent = `${myLibrary.length}`;
+        }
 }
 
 //remove books
@@ -117,14 +122,15 @@ function toggleReadStatus(index) {
     showBooks();
 }
 
-function showBooksAmount() {
-    let newBookBtnContainer = document.querySelector('.new-book-btn-container');
-    let showBooksAmountContainer = document.createElement('div');
+//show books amount
+// function showBooksAmount() {
+//     let newBookBtnContainer = document.querySelector('.new-book-btn-container');
+//     let showBooksAmountContainer = document.createElement('div');
 
-    let booksContainerText = document.createElement('h3');
-    booksContainerText = "";
-    booksContainerText.textContent = `Number of Books: ${myLibrary.length}`;
+//     let booksContainerText = document.createElement('h3');
+//     booksContainerText = "";
+//     booksContainerText.textContent = `Number of Books: ${myLibrary.length}`;
 
-    showBooksAmountContainer.appendChild(booksContainerText);
-    newBookBtnContainer.appendChild(showBooksAmountContainer);
-}
+//     showBooksAmountContainer.appendChild(booksContainerText);
+//     newBookBtnContainer.appendChild(showBooksAmountContainer);
+// }
